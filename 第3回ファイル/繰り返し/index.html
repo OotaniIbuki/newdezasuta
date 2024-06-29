@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>繰り返し</title>
+    <meta name="description" content="繰り返し" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <h1>繰り返し</h1>
+
+    <script>
+        //繰り返し 繰り返しの回数が決まっている場合
+        //for(var i = 0（初期値）; i < 5（条件値）; i++（増減値）)
+        for (var i = 0; i < 5; i++) {
+            //繰り返す処理
+            console.log(i);
+        }
+
+        //while文 繰り返しの回数が決まっていない場合
+        var num = 2;
+        while (num < 100) {
+            //繰り返す処理
+            num = num * 3;
+        }
+        console.log(num);
+
+        //break
+        var num2 = 2;
+        while (num2 < 100) {
+            //繰り返す処理
+            num2 = num2 * 3;
+            if (num2 == 18) {
+                //ここでwhileの処理が終了する
+                break;
+            }
+        }
+        console.log(num2);
+
+        //continue
+
+        for (var i = 0; i < 5; i++) {
+            if (i == 3) {
+                continue
+            }
+            console.log(i);
+        }
+
+
+        //無限ループに注意 whileは必ず処理をぬけれるように記述する
+        var num3 = 2;
+        while (num3 < 100) {
+            console.log(num3);
+        }
+
+    </script>
+</body>
+
+</html>

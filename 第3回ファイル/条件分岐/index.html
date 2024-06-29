@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>条件分岐</title>
+    <meta name="description" content="Javascript記述例" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <h1>条件分岐</h1>
+
+    <script>
+        //条件分岐
+        var num = 1;
+        if (num > 10) {
+            console.log('10より大きい');
+
+        } else {
+            console.log('10より小さい');
+        }
+        //条件分岐その2 さらに条件を追加できる
+        var num2 = 1;
+        if (num2 == 10) {
+            console.log('値は10');
+
+        } else if (num2 == 1) {
+            console.log('値は1');
+        } else {
+            console.log('値は10でも1でもない');
+        }
+
+        //スコープ　{}内で宣言された変数は{}の外では参照できない
+        //varだと参照できる場合がある
+        var num = 1;
+        if (num == 10) {
+            let answer = '値は10';
+
+        } else if (num == 1) {
+            let answer = '値は1';
+        } else {
+            let answer = '値は1でも10でもない';
+        }
+        console.log(answer);
+
+    </script>
+</body>
+
+</html>
