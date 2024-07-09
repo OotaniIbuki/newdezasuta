@@ -54,18 +54,18 @@ header {
 /* 最初のセクション */
 .first_section {
   /* background-color: lightblue; */
-  padding: 108px 0 96px;
+  padding: 11% 0 10%;
   text-align: center;
 }
 
 .english_text {
   font-size: 30px;
-  margin-bottom: 54px;
+  margin-bottom: 5%;
 }
 
 .main_text {
   font-size: 82px;
-  margin-bottom: 40px;
+  margin-bottom: 4%;
   line-height: 1.17;
   letter-spacing: 0.1em;
 }
@@ -76,27 +76,28 @@ header {
   letter-spacing: 0.1em;
 }
 
-/* ABOUTセクション */
+/* ABOUTセクション pxから％に変換したら幅が変わってしまいました。about_left imgの幅をコンテンツ幅に対して50％にしたいのですが、そうするとさらに画像が縮小してしまいます。autoを付けても動かなかったので、考え方のヒントを教えて頂きたいです。。*/
 .about {
   display: flex;
-  margin-bottom: 95px;
-  /* background-color: pink; */
+  margin-bottom: 10%;
+  background-color: pink;
 }
 
-.about img {
+.about .about_left img {
   border-radius: 0 0  40px 0;
   width: 500px;
+  height: auto;
 }
 
 
 .about .about_right {
-padding-left: 80px;
+padding-left: 8%;
 /* background-color:lightsalmon; */
 }
 
 .about h2 {
   width: 272px;
-  margin: 60px 0 48px 0;
+  margin: 6% 0 5% 0;
   /* background-color: #e8d9bf; */
 } 
 
@@ -104,11 +105,11 @@ padding-left: 80px;
 .section_title {
   font-size: 44px;
   line-height: 1.386;
-  margin-bottom: 20px;
+  margin-bottom: 2%;
   /* background-color: aquamarine; */
 }
 
-/* ここのpタグのテキストがイラレ上のテキストと同じ改行にならないです、、 */
+
 .section_title p {
   line-height: 1.625;
 }
@@ -122,13 +123,13 @@ padding-left: 80px;
 
 /* MENUセクション */
 .menu {
-  margin-bottom: 82px;
+  margin-bottom: 8%;
   /* background-color: lightcoral; */
 }
 
 .menu h2{
   width: 151px;
-  margin: 0 auto 37px;
+  margin: 0 auto 4%;
 }
 
 .menu h3 {
@@ -144,7 +145,7 @@ padding-left: 80px;
 }
 
 .first_article img {
-  border-radius: 0 42px 0 0;
+  border-radius: 0 40px 0 0;
   width: 500px;
 }
 
@@ -162,13 +163,13 @@ padding-left: 80px;
 
 /* GALLERYセクション */
 .gallery {
-  margin-bottom: 63px;
+  margin-bottom: 6%;
   /* background-color: lightcoral; */
 }
 
 .gallery h2{
   width: 245px;
-margin: 0 auto 14px;
+  margin: 0 auto 1%;
 }
 
 .gallery_area {
@@ -183,7 +184,7 @@ margin: 0 auto 14px;
 
 /* EVENTセクション */
 .event {
-  margin-bottom: 68px;
+  margin-bottom: 7%;
   /* background-color: lightcoral; */
 }
 
@@ -197,13 +198,13 @@ margin: 0 auto 14px;
   font-size: 23px;
   background-color: #fff;
   border: solid 4px #4f260B;
-  /* 中央揃えのautoが効かず、無理やりパディング取ってます。。 */
-  padding: 40px 0 40px 160px ;
+  /* 中央揃えのautoが効かず、パディングの値を取って%に変換してます↓ */
+  padding: 4% 0 4% 16% ;
 }
 
 .date .date_list {
   display: flex;
-  margin-bottom: 21px;
+  margin-bottom: 2%;
 }
 
 .date .date_list dt,
@@ -212,11 +213,11 @@ margin: 0 auto 14px;
 }
 
 .date .date_list dt{
-  padding-right: 40px;
+  padding-right: 4%;
 }
 
 
-/* 最後の.date_list(コーヒー～の行)のmargin-bottomを消したくて、以下色々試してみたのですが消えません。。。 */
+/* 最後の.date_list(コーヒー～の行)のmargin-bottomを消したくて、以下色々試してみたのですが消えませんでした。。考え方のヒントを教えて頂きたいです。 */
 
 /* .date .date_list dt :last-child {
   margin-bottom: 0;
@@ -269,29 +270,31 @@ footer {
   background-color:#fff;
 }
 
+/* DESIGN　CAFEの画像とaddressのテキストを.address_areaの上揃えにしたいのですが、画像の上下に余白が出来ていて揃えることが出来ませんでした。調べると”画像はデフォルトでdisplay: inline;となっており、インライン要素は行のベースラインに揃えられるため、その周囲に余白が生じることがあります”と出てきて、vertical-align: bottom;をつけたりmargin:0;にしたり試しましたが、動かなかったため、アドバイスを頂きたいです…！↓ */
 footer img {
   width: 227px;
+  object-fit: contain;
   margin-right: 62px;
+  background-color: aliceblue;
 }
 
 footer .address_area {
   display: flex;
   justify-content: center;
-  margin-bottom: 83px;
-  /* background-color: yellow; */
+  margin-bottom: 8%;
+  background-color: yellow;
 }
 
 address {
+  color: black;
   font-style: normal;
+  line-height: 1.95;
+  font-size: 20px;
+  /* background-color: #d30202; */
 }
 
-/* line-heightが効かなくて行間詰まってます。。 */
 footer .footer_address {
-  color: black;
-  display: block;
-  font-size: 20px;
-  line-height: 1.95;
-  margin-left: 62px;
+  margin-left: 6%;
 }
 
 footer .copyright {
