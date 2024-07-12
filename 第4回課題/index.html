@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <div class="header_slider">
+    <div class="header_slider" id="pagetop">
       <img src="images/pc_first-100.jpg" alt="店内の様子">
     </div>
     <div class="header_wrap">
@@ -48,19 +48,19 @@
         <h2><img src="./images/menu@2x.png" alt="メニュー"></h2>
       <div class="article_area">
         <article class="first_article">
-          <img src="./images/pc_menu_drink-100.jpg" alt="ドリンク">
+          <img src="./images/pc_menu_drink-100.jpg" alt="ドリンク" class="menu_image">
           <h3>Drink</h3>
           <p>ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
         </article>
         
         <article class="first_article">
-          <img src="./images/pc_menu_food-100.jpg" alt="フード">
+          <img src="./images/pc_menu_food-100.jpg" alt="フード" class="menu_image">
           <h3>Food</h3>
           <p>フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
         </article>
 
         <article class="first_article">
-          <img src="./images/pc_menu_sweets-100.jpg" alt="スイーツ">
+          <img src="./images/pc_menu_sweets-100.jpg" alt="スイーツ" class="menu_image">
           <h3>Sweets</h3>
           <p>スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
         </article>
@@ -80,17 +80,19 @@
 
       <section id="event" class="event">
         <h2><img src="./images/event@2x.png" alt="イベント"></h2>
-        <dl class="date">
+          <dl class="date">
+            <div class="event_contents">
+            <div class="date_list">
+            <dt><time>2020.06.23</time></dt><dd>7月はイベント出店のため0/0お休みします</dd>
+          </div>
           <div class="date_list">
-          <dt><time>2020.06.23</time></dt><dd>7月はイベント出店のため0/0お休みします</dd>
+            <dt><time>2020.03.15</time></dt><dd>春の新商品新発売。話題のあのブランドとコラボ</dd>
+          </div>
+          <div class="date_list">
+            <dt><time>2020.02.06</time></dt><dd>コーヒーの日で30％OFFイベントを開催［3日間限定］</dd>
+          </div>
         </div>
-        <div class="date_list">
-          <dt><time>2020.03.15</time></dt><dd>春の新商品新発売。話題のあのブランドとコラボ</dd>
-        </div>
-        <div class="date_list">
-          <dt><time>2020.02.06</time></dt><dd>コーヒーの日で30％OFFイベントを開催［3日間限定］</dd>
-        </div>
-        </dl>
+          </dl>
       </section>
 
       <section id="access" class="access">
@@ -103,12 +105,15 @@
     
       <footer>
         <div class="address_area">
-        <img src="./images/design_cafe_logo_footer@2x.png" alt="デザインカフェ">
-      <address class="footer_adress" >
-      OPEN 18:00 / CLOSE 24:00<br>〒150-0022<br>東京都渋谷区東京南123デザインビルB1<br>MAIL：info@designcafe.tokyo
-      </address>
+          <img src="./images/design_cafe_logo_footer@2x.png" alt="デザインカフェ">
+          <address class="footer_adress" >
+          OPEN 18:00 / CLOSE 24:00<br>〒150-0022<br>東京都渋谷区東京南123デザインビルB1<br>MAIL：info@designcafe.tokyo
+          </address>
         </div>
-    <p class="copyright">&copy; 2021 DESIGN CAFE</p>
+        <a href="#pagetop">
+        <img src="./images/to_top@2x.png" alt="トップへ戻る" class="pagetop">
+        </a>
+        <p class="copyright">&copy; 2021 DESIGN CAFE</p>
       </footer>
 
 </body>

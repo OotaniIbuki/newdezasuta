@@ -46,7 +46,7 @@ header {
 
 /* コンテンツ幅を指定 */
 .section_area {
-  width: 1000px;
+ max-width: 1000px;
   margin: 0 auto;
   /* background-color: aliceblue; */
 }
@@ -76,22 +76,26 @@ header {
   letter-spacing: 0.1em;
 }
 
-/* ABOUTセクション pxから％に変換したら幅が変わってしまいました。about_left imgの幅をコンテンツ幅に対して50％にしたいのですが、そうするとさらに画像が縮小してしまいます。autoを付けても動かなかったので、考え方のヒントを教えて頂きたいです。。*/
+/* ABOUTセクション*/
 .about {
   display: flex;
+  justify-content: space-between;
   margin-bottom: 10%;
-  background-color: pink;
+  /* background-color: pink; */
+}
+
+.about .about_left {
+  width: 50%;
+  /* background-color: #d30202; */
 }
 
 .about .about_left img {
   border-radius: 0 0  40px 0;
-  width: 500px;
-  height: auto;
 }
 
 
 .about .about_right {
-padding-left: 8%;
+width: 41%;
 /* background-color:lightsalmon; */
 }
 
@@ -132,33 +136,38 @@ padding-left: 8%;
   margin: 0 auto 4%;
 }
 
-.menu h3 {
-  font-size: 38px;
-  font-weight: normal;
-  color:#d30202;
-}
-
+/* 画像を基準にすると全体が基準幅になってしまうのか、h3が3つ固まってヘッダーの方に動いてしまいます。。なのでarticleタグを基準としましたが、1000px以下になったときに動いてしまいます。*/
 .first_article {
-  /* background-color: lightgoldenrodyellow; */
   width: 30%;
   position: relative;
+  background-color: lightgoldenrodyellow;
 }
 
-.first_article img {
+/* 画像を基準にしたときにクラス名を付けたのでそのまま置いてます */
+.first_article .menu_image {
   border-radius: 0 40px 0 0;
-  width: 500px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15%;
 }
 
 .first_article h3 {
+  font-size: 38px;
+  font-weight: normal;
+  color:#d30202;
+  background-color: lightgreen;
   position: absolute;
-  bottom: 95px;
-  left: 13px;
+    /* topが193/315(article縦)*100＝61％、61％だとカンプの値通りのはずですが画像に被らなくて、こちら側で調節しました… このようにカンプとのずれが生じた場合の対処ってどのようになさってますか、、？*/
+  top: 58%;
+    /* 13/300*100(画像の幅) */
+  left: 4%;
 }
+
 
 .first_article p {
   font-size: 17px;
   line-height: 1.471;
-  margin-top: 45px;
+ background-color: lightcoral;
 }
 
 /* GALLERYセクション */
@@ -198,59 +207,35 @@ padding-left: 8%;
   font-size: 23px;
   background-color: #fff;
   border: solid 4px #4f260B;
-  /* 中央揃えのautoが効かず、パディングの値を取って%に変換してます↓ */
-  padding: 4% 0 4% 16% ;
+ padding: 4% 0;
+}
+
+.event_contents {
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .date .date_list {
   display: flex;
-  margin-bottom: 2%;
-}
-
-.date .date_list dt,
-.date .date_list dd {
-  /* background-color: aquamarine; */
+  margin-bottom: 3%;
 }
 
 .date .date_list dt{
   padding-right: 4%;
 }
 
-
-/* 最後の.date_list(コーヒー～の行)のmargin-bottomを消したくて、以下色々試してみたのですが消えませんでした。。考え方のヒントを教えて頂きたいです。 */
-
-/* .date .date_list dt :last-child {
-  margin-bottom: 0;
+.date .date_list dd {
+  white-space: nowrap;
+  border-bottom: solid 1px #4f260B;
 }
 
-.date .date_list dd :last-child {
-  margin-bottom: 0;
-} 
-
-.date .date_list dt :last-child {
+.date .date_list:last-child {
   margin-bottom: 0px;
 }
-
-.date .date_list dd :last-child {
-  margin-bottom: 0px;
-}
-
-.date.date_list:last-child{
-  margin-bottom: 0;
-} 
-
-.date .date_list dt,
-.date .date_list dd:nth-last-child{
-  color: red;
-}  */
 
 
 
 /* ACCESSエリア */
-.access {
-  /* background-color: lightcoral; */
-}
-
 .access h2 {
   width: 214px;
   margin: 0 auto 38px;
@@ -268,21 +253,23 @@ iframe {
 footer {
   padding: 76px 0 78px;
   background-color:#fff;
+  position: relative;
 }
 
-/* DESIGN　CAFEの画像とaddressのテキストを.address_areaの上揃えにしたいのですが、画像の上下に余白が出来ていて揃えることが出来ませんでした。調べると”画像はデフォルトでdisplay: inline;となっており、インライン要素は行のベースラインに揃えられるため、その周囲に余白が生じることがあります”と出てきて、vertical-align: bottom;をつけたりmargin:0;にしたり試しましたが、動かなかったため、アドバイスを頂きたいです…！↓ */
-footer img {
+.address_area img {
   width: 227px;
   object-fit: contain;
   margin-right: 62px;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
 }
 
 footer .address_area {
+  max-width: 1000px;
   display: flex;
-  justify-content: center;
-  margin-bottom: 8%;
-  background-color: yellow;
+  justify-content: left;
+  align-items: flex-start;
+  margin: 0 auto 8%;
+  /* background-color: yellow; */
 }
 
 address {
@@ -291,6 +278,14 @@ address {
   line-height: 1.95;
   font-size: 20px;
   /* background-color: #d30202; */
+}
+
+/*トップに戻るボタンを 1回目の提出で付け忘れており追加しました。今後気を付けます！ */
+footer .pagetop {
+ width: 125px;
+ position: absolute;
+ top: 10%;
+ right: 16%;
 }
 
 footer .footer_address {
