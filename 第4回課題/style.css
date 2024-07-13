@@ -1,10 +1,14 @@
 @charset "utf-8";
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* ヘッダー */
 body {
   max-width: 1980px;
   background-color: #e8d9bf;
   overflow-x: hidden;
-  padding: 0 10px;
 }
 
 header {
@@ -44,10 +48,11 @@ header {
  text-align: center;
 }
 
-/* コンテンツ幅を指定 */
+/* コンテンツ幅*/
 .section_area {
- max-width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 0 10px;
   /* background-color: aliceblue; */
 }
 
@@ -118,12 +123,6 @@ width: 41%;
   line-height: 1.625;
 }
 
-.article_area {
-  display: flex;
-  justify-content: space-between;
-  /* background-color: lightblue; */
-}
-
 
 /* MENUセクション */
 .menu {
@@ -136,14 +135,23 @@ width: 41%;
   margin: 0 auto 4%;
 }
 
-/* 画像を基準にすると全体が基準幅になってしまうのか、h3が3つ固まってヘッダーの方に動いてしまいます。。なのでarticleタグを基準としましたが、1000px以下になったときに動いてしまいます。*/
-.first_article {
-  width: 30%;
-  position: relative;
-  background-color: lightgoldenrodyellow;
+.article_area {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: lightblue; */
 }
 
-/* 画像を基準にしたときにクラス名を付けたのでそのまま置いてます */
+
+.first_article {
+  width: 30%;
+  /* background-color: lightgoldenrodyellow; */
+}
+
+/* 画像とh3を囲んでh3の親要素とする */
+.menu_content {
+  position: relative;
+}
+
 .first_article .menu_image {
   border-radius: 0 40px 0 0;
   width: 100%;
@@ -155,11 +163,10 @@ width: 41%;
   font-size: 38px;
   font-weight: normal;
   color:#d30202;
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
+  /* menu_contentを基準に計算 */
   position: absolute;
-    /* topが193/315(article縦)*100＝61％、61％だとカンプの値通りのはずですが画像に被らなくて、こちら側で調節しました… このようにカンプとのずれが生じた場合の対処ってどのようになさってますか、、？*/
-  top: 58%;
-    /* 13/300*100(画像の幅) */
+  top: 78%;
   left: 4%;
 }
 
@@ -167,7 +174,7 @@ width: 41%;
 .first_article p {
   font-size: 17px;
   line-height: 1.471;
- background-color: lightcoral;
+ /* background-color: lightcoral; */
 }
 
 /* GALLERYセクション */
@@ -233,8 +240,6 @@ width: 41%;
   margin-bottom: 0px;
 }
 
-
-
 /* ACCESSエリア */
 .access h2 {
   width: 214px;
@@ -269,7 +274,7 @@ footer .address_area {
   justify-content: left;
   align-items: flex-start;
   margin: 0 auto 8%;
-  /* background-color: yellow; */
+  padding: 0 10px;
 }
 
 address {
@@ -280,7 +285,6 @@ address {
   /* background-color: #d30202; */
 }
 
-/*トップに戻るボタンを 1回目の提出で付け忘れており追加しました。今後気を付けます！ */
 footer .pagetop {
  width: 125px;
  position: absolute;
