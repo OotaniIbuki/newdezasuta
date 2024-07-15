@@ -293,8 +293,8 @@ address {
 footer .pagetop {
  width: 125px;
  position: fixed;
- bottom: 5%;
- right: 5%;
+ bottom: 2%;
+ right: 2%;
 }
 
 footer .footer_address {
