@@ -63,7 +63,7 @@
       <section class="first_section">
         <div class="english_text">Have a happy day From a cup of coffee.</div>
         <div class="main_text">ハッピーに溢れる1日を<br>1杯のコーヒーから。</div>
-        <div class="sub_text">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</div>
+        <div class="sub_text">毎日を丁寧に大切に過ごしたい。<br>だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間と<br>こだわりのコーヒーを提供したい。</div>
       </section>
 
       <section id="about" class="about">
@@ -231,19 +231,16 @@
     });
 
   $('.gallery_area').slick({
-  dots: true,
-  infinite: false,
+  infinite: true,
   speed: 300,
   slidesToShow: 5,
-  slidesToScroll: 5,
   responsive: [
     {
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        infinite: true,
-        dots: true
+        infinite: true
       }
     }
   ]

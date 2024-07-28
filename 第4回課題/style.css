@@ -7,8 +7,8 @@ html {
 /* ヘッダー */
 body {
   max-width: 1980px;
-  background-color: #e8d9bf;
   overflow-x: hidden;
+  background-color: #e8d9bf;
 }
 
 header {
@@ -72,12 +72,10 @@ header {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 10px;
-  /* background-color: aliceblue; */
 }
 
 /* 最初のセクション */
 .first_section {
-  /* background-color: lightblue; */
   padding: 11% 0 10%;
   text-align: center;
 }
@@ -100,17 +98,19 @@ header {
   letter-spacing: 0.1em;
 }
 
+.sub_text br {
+  display: none;
+}
+
 /* ABOUTセクション*/
 .about {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10%;
-  /* background-color: pink; */
 }
 
 .about .about_left {
   width: 50%;
-  /* background-color: #d30202; */
 }
 
 .about .about_left img {
@@ -122,13 +122,11 @@ header {
 
 .about .about_right {
 width: 41%;
-/* background-color:lightsalmon; */
 }
 
 .about h2 {
   width: 272px;
   margin: 9% 0 9% 0;
-  /* background-color: #e8d9bf; */
 } 
 
 
@@ -136,7 +134,6 @@ width: 41%;
   font-size: 44px;
   line-height: 1.386;
   margin-bottom: 4%;
-  /* background-color: aquamarine; */
 }
 
 
@@ -148,7 +145,6 @@ width: 41%;
 /* MENUセクション */
 .menu {
   margin-bottom: 8%;
-  /* background-color: lightcoral; */
 }
 
 .menu h2{
@@ -159,13 +155,11 @@ width: 41%;
 .article_area {
   display: flex;
   justify-content: space-between;
-  /* background-color: lightblue; */
 }
 
 
 .first_article {
   width: 30%;
-  /* background-color: lightgoldenrodyellow; */
 }
 
 /* 画像とh3を囲んでh3の親要素とする */
@@ -184,7 +178,6 @@ width: 41%;
   font-size: 38px;
   font-weight: normal;
   color:#d30202;
-  /* background-color: lightgreen; */
   /* menu_contentを基準に計算 */
   position: absolute;
   top: 78%;
@@ -195,13 +188,11 @@ width: 41%;
 .first_article p {
   font-size: 17px;
   line-height: 1.471;
- /* background-color: lightcoral; */
 }
 
 /* GALLERYセクション */
 .gallery {
   margin-bottom: 6%;
-  /* background-color: lightcoral; */
 }
 
 .gallery h2{
@@ -286,7 +277,6 @@ width: 41%;
 /* EVENTセクション */
 .event {
   margin-bottom: 7%;
-  /* background-color: lightcoral; */
 }
 
 .event h2 {
@@ -318,6 +308,7 @@ width: 41%;
 
 .data .data_list dd {
   white-space: nowrap;
+  width: fit-content;
   border-bottom: solid 1px #4f260B;
 }
 
@@ -350,7 +341,6 @@ footer {
   width: 227px;
   object-fit: contain;
   margin-right: 62px;
-  /* background-color: aliceblue; */
 }
 
 footer .address_area {
@@ -367,7 +357,6 @@ address {
   font-style: normal;
   line-height: 1.95;
   font-size: 20px;
-  /* background-color: #d30202; */
 }
 
 footer .pagetop {
@@ -502,14 +491,12 @@ about us(font-sizeの調整のみ)
     /* コンテンツ幅*/
     .section_area {
       margin: 0 auto;
-      /* background-color: aliceblue; */
     }
     
     /* 最初のセクション */
     .first_section {
       padding: 11% 0 10%;
       text-align: center;
-       /* background-color: lightblue; */
     }
   
     .english_text {
@@ -527,20 +514,21 @@ about us(font-sizeの調整のみ)
       line-height: 1.875;
       letter-spacing: 0.1em;
     }
-    
+
+    .sub_text br {
+      display: inline;
+    }
     
     /* ABOUTセクション*/
     .about {
       display: flex;
       flex-direction: column;
       margin-bottom: 10%;
-      /* background-color: pink; */
     }
 
     .about .about_left {
       width: 100%;
       order: 1;
-      /* background-color: #d30202; */
     }
     
     .about .about_left img {
@@ -553,12 +541,10 @@ about us(font-sizeの調整のみ)
     .about_right {
       display: contents;
     width: 100%;
-    /* background-color:lightsalmon; */
     }
     .about h2 {
       width: 160px;
       margin: 0 auto 1%;
-      /* background-color: #e8d9bf; */
     } 
 
     .section_title {
@@ -566,7 +552,6 @@ about us(font-sizeの調整のみ)
       line-height: 1.25;
       margin: 4% 0; 
       order: 2;
-      /* background-color: aquamarine; */
     }
     
     .about_right p {
@@ -576,8 +561,7 @@ about us(font-sizeの調整のみ)
     
     /* MENUセクション */
     .menu {
-      margin-bottom: 8%;
-      /* background-color: lightcoral; */
+      margin: 0 8% 8%
     }
     
     .menu h2{
@@ -588,12 +572,10 @@ about us(font-sizeの調整のみ)
     .article_area {
       display: flex;
       flex-direction: column;
-      /* background-color: lightblue; */
     }
     
     .first_article {
       width: 100%;
-      /* background-color: lightgoldenrodyellow; */
     }
     
     /* 画像とh3を囲んでh3の親要素とする */
@@ -622,7 +604,6 @@ about us(font-sizeの調整のみ)
       font-size: 17px;
       line-height: 1.588;
       margin-bottom: 10%;
-     /* background-color: lightcoral; */
     }
     
     /* ACCESSエリア */
@@ -642,7 +623,6 @@ about us(font-sizeの調整のみ)
     /* GALLERYセクション */
     .gallery {
       margin-bottom: 6%;
-      /* background-color: lightcoral; */
     }
     
     .gallery h2{
@@ -725,9 +705,15 @@ about us(font-sizeの調整のみ)
       font-size: 16px;
       background-color: #fff;
       border: solid 4px #4f260B;
-     padding: 4% ;
+      padding: 4% ;
+      margin: 0 auto;
+      width: fit-content;
     }
-    
+
+    .event_contents{
+      margin: 0;
+    }
+
     .data .data_list {
       display: flex;
       flex-direction: column;
@@ -737,13 +723,6 @@ about us(font-sizeの調整のみ)
     .data .data_list dt{
       padding-right: 0;
       margin-bottom: 1%;
-    }
-  
-    .data .data_list dd {
-      width: 80%;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
     }
     
     .data .data_list:last-child {
@@ -777,7 +756,6 @@ about us(font-sizeの調整のみ)
     object-fit: contain;
     margin-right: 62px;
     margin-bottom: 4%;
-    /* background-color: aliceblue; */
   }
   
   footer .address_area {
@@ -791,7 +769,6 @@ about us(font-sizeの調整のみ)
     font-style: normal;
     line-height: 1.95;
     font-size: 18px;
-    /* background-color: #d30202; */
   }
   
   footer .pagetop {
@@ -813,19 +790,30 @@ about us(font-sizeの調整のみ)
   }
   } 
 
+  @media screen and (max-width:425px) {
+  .event .data {
+      overflow: hidden;
+      width: auto;
+  }
+  .data .data_list dd {
+    width: calc(100vw - 70px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
   @media screen and (max-width:395px) {
       .first_section .main_text {
         font-size: 37px;
       }
-
+    }
   @media screen and (max-width:375px) {
     .first_section .main_text {
       font-size: 34px;
     }
-
-    /* EVENTのお知らせエリア */
+   /* EVENTのお知らせエリア */
     .event .data{
       overflow: hidden;
     }
-  }
 }
